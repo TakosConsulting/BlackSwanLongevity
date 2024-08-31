@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="longevity-scenario-analysis">
+  <h1>Comprehensive Longevity and Black Swan Event Scenario Analysis</h1>
+  
+  <div class="input-group">
+    <label for="population">Initial Population</label>
+    <input type="number" id="population" value="1000000">
+  </div>
+
+  <div class="input-group">
+    <label for="lifeExpectancy">Initial Life Expectancy (years)</label>
+    <input type="number" id="lifeExpectancy" value="80">
+  </div>
+
+  <div class="input-group">
+    <label for="retirementAge">Initial Retirement Age (years)</label>
+    <input type="number" id="retirementAge" value="65">
+  </div>
+
+  <div class="input-group">
+    <label for="longevityBreakthroughProbability">Longevity Breakthrough Probability (%)</label>
+    <input type="range" id="longevityBreakthroughProbability" min="0" max="20" step="0.1" value="5">
+    <span id="longevityBreakthroughProbabilityValue">5%</span>
+  </div>
+
+  <div class="input-group">
+    <label for="longevityBreakthroughImpact">Longevity Breakthrough Impact (years added)</label>
+    <input type="range" id="longevityBreakthroughImpact" min="0" max="50" step="1" value="20">
+    <span id="longevityBreakthroughImpactValue">20 years</span>
+  </div>
+
+  <div class="input-group">
+    <label for="healthcareExpenditurePerCapita">Healthcare Expenditure per Capita ($)</label>
+    <input type="number" id="healthcareExpenditurePerCapita" value="10000">
+  </div>
+
+  <div class="input-group">
+    <label for="economicGrowthRate">Economic Growth Rate (%)</label>
+    <input type="range" id="economicGrowthRate" min="0" max="10" step="0.1" value="2">
+    <span id="economicGrowthRateValue">2%</span>
+  </div>
+
+  <div class="input-group">
+    <label for="societalAdaptationRate">Societal Adaptation Rate</label>
+    <select id="societalAdaptationRate">
+      <option value="low">Low</option>
+      <option value="medium" selected>Medium</option>
+      <option value="high">High</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label for="workforceAdaptationRate">Workforce Adaptation Rate</label>
+    <select id="workforceAdaptationRate">
+      <option value="low">Low</option>
+      <option value="medium" selected>Medium</option>
+      <option value="high">High</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label for="infrastructureReadiness">Infrastructure Readiness</label>
+    <select id="infrastructureReadiness">
+      <option value="low">Low</option>
+      <option value="medium" selected>Medium</option>
+      <option value="high">High</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label for="legalFrameworkAdaptation">Legal Framework Adaptation</label>
+    <select id="legalFrameworkAdaptation">
+      <option value="low">Low</option>
+      <option value="medium" selected>Medium</option>
+      <option value="high">High</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label for="blackSwanEventType">Black Swan Event</label>
+    <select id="blackSwanEventType">
+      <option value="none">None</option>
+      <option value="pandemic">Global Pandemic</option>
+      <option value="worldWar">World War</option>
+      <option value="economicCollapse">Global Economic Collapse</option>
+      <option value="ai_singularity">AI Singularity</option>
+      <option value="climate_disaster">Climate Disaster</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label for="blackSwanEventYear">Black Swan Event Year</label>
+    <input type="number" id="blackSwanEventYear" value="10" min="1">
+  </div>
+
+  <div class="input-group">
+    <label for="years">Simulation Years</label>
+    <input type="number" id="years" value="50" min="1" max="100">
+  </div>
+
+  <button id="runSimulation">Run Simulation</button>
+
+  <div id="results" style="display: none;">
+    <div id="chart"></div>
+    <div class="qualitative-insights">
+      <h3>Qualitative Insights:</h3>
+      <textarea id="qualitativeInsights" readonly></textarea>
+    </div>
+  </div>
+</div>
+      <script src="script.js"></script>
+  </body>
+</html>
